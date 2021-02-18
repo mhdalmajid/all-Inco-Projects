@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="application.css" />
+    <link rel="stylesheet" href="modal2.css" />
+  </head>
+  <body>
+    <div id="error"></div>
+    <form method="GET" id="form">
+      <label for="firstName">Frist Name:</label>
+      <input type="text" id="firstName" name="firstName" />
+      <br /><br />
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" />
+      <br /><br />
+
+      Email: <input type="email" id="email" name="email" /> <br /><br />
+
+      <p>
+        Click the button to display the value of the value attribute of the text
+        field.
+      </p>
+
+      <!-- the modal button/the class defines the button as a modal button-->
+      <button type="submit" id="modalBtn" class="button">
+        click here
+      </button>
+    </form>
+
+    <!-- the markup for the modal-->
+    <div id="simpleModal" class="modal">
+      <div class="modal-content">
+        <!--the span with the &times forms the little x symbol-->
+        <span class="closeBtn" id="closeBtn">&times;</span>
+        <!--modal output-->
+        <p id="demo">Thankyou for your submission!!!</p>
+      </div>
+    </div>
+
+    <script defer src="submission_form2.js"></script>
+  </body>
+</html>

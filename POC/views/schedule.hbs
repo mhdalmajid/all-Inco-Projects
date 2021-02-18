@@ -1,0 +1,49 @@
+<div class="mt-5">
+    <h2 class="mb-4">Add yourself a new schedule</h2>
+
+    <form action="/schedule" method="POST">
+        <div class="form-group">
+            <label for="dayInput">Day of the week</label>
+            <select name="day" id="dayInput" required>
+                <option selected value=1>Monday</option>
+                <option value=2>Tuesday</option>
+                <option value=3>Wednesday</option>
+                <option value=4>Thursday</option>
+                <option value=5>Friday</option>
+                <option value=6>Saturday</option>
+                <option value=7>Sunday</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="startAtInput">Start Time</label>
+            <input type="time" id="startAtInput" name="startAt" value="09:00" required>
+        </div>
+
+        <div class="form-group">
+            <label for="endAtInput">End Time</label>
+            <input type="time" id="endAtInput" name="endAt" value="18:00" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add schedule</button>
+    </form>
+
+    <h3 class="mt-5 mb-4">Your existing schedules</h3>
+
+    <table class="table mb-5">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Start at</th>
+                <th>End at</th>
+            </tr>
+        </thead>
+        {{#each scheduleData}}
+        <tr>
+            <td>{{getDay day}}</td>
+            <td>{{truncTime start_at}}</td>
+            <td>{{truncTime end_at}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

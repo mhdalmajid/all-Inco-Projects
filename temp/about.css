@@ -1,0 +1,28 @@
+.container {
+  width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+.container-fluit {
+  width: 100%;
+}
+.about_container {
+  display: flex;
+  flex-flow: wrap;
+}
+
+.about_card {
+  width: 50%;
+}
+.about_img {
+  width: 100%;
+}
+.about_parra {
+  padding: 10px;
+}
